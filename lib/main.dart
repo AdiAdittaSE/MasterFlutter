@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:master_flutter/pages/home_page.dart';
 import 'package:master_flutter/pages/login_page.dart';
+import 'package:master_flutter/utils/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -34,8 +35,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => LoginPage(),
-        '/Home': (context) => HomePage(),
-        '/Login': (context) => LoginPage(),
+        MyRoutes.homeRoute : (context) => HomePage(),
+        MyRoutes.loginRoute : (context) => LoginPage(),
       },
     );
   }

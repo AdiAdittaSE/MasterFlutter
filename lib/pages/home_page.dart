@@ -6,10 +6,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
         centerTitle: true,
       ),
-      body: Center(child: Text('Home Page'),),
+      drawer: Drawer(),
+      body: const Center(child: Text('Home Page'),),
     );
   }
 }
