@@ -6,35 +6,42 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageUrl =
+    const imageUrl =
         'https://pbs.twimg.com/profile_images/1389596217395453957/-X9V-yXR_400x400.jpg';
     return Drawer(
       child: Container(
         color: Colors.blue,
         child: ListView(
           padding: EdgeInsets.zero,
-          children: [
+          children: const [
             DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                     //color: Colors.white
                     ),
-                accountName: const Text(
+                accountName: Text(
                   'Adi',
                   style: TextStyle(color: Colors.white),
                 ),
-                accountEmail: const Text(
+                accountEmail: Text(
                   'adi@gmail.com',
                   style: TextStyle(color: Colors.white),
                 ),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(imageUrl),
                 ),
+                // otherAccountsPictures: [
+                //   CircleAvatar(
+                //     backgroundImage: NetworkImage(imageUrl),
+                //   ),CircleAvatar(
+                //     backgroundImage: NetworkImage(imageUrl),
+                //   ),
+                // ],
               ),
             ),
-            const ListTile(
+            ListTile(
               leading: Icon(
                 CupertinoIcons.home,
                 color: Colors.white,
@@ -45,7 +52,7 @@ class MyDrawer extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
             ),
-            const ListTile(
+            ListTile(
               leading: Icon(
                 CupertinoIcons.profile_circled,
                 color: Colors.white,
@@ -56,13 +63,24 @@ class MyDrawer extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
             ),
-            const ListTile(
+            ListTile(
               leading: Icon(
                 CupertinoIcons.mail,
                 color: Colors.white,
               ),
               title: Text(
                 'Email Me',
+                textScaleFactor: 1.2,
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.logout,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Logout',
                 textScaleFactor: 1.2,
                 style: TextStyle(color: Colors.white),
               ),
