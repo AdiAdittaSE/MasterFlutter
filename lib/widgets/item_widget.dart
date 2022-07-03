@@ -11,14 +11,14 @@ class ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Card(
         child: ListTile(
           onTap: (){},
           leading: Image.network(item.image),
           title: Text(item.name),
           subtitle: Text(item.desc),
-          trailing: Text('\$${item.price.toString()}',textScaleFactor: 1.2, style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),),
+          trailing: Text('\$${item.price.toString()}',textScaleFactor: 1.2, style: const TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),),
         ),
       ),
     );
